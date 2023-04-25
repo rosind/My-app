@@ -1,18 +1,30 @@
-import {useState} from "react";
-
+import {useState, useEffect} from "react";
 
 function MyCart({ cart, updateCart}) {
     const [isOpen, setIsOpen] = useState(true)
-    /*const total = cart.reduce(
-      (acc, carType) => acc + carType.amount * carType.price, 0
-    )*/
+    //const total = cart.reduce(
+     // (acc, carType) => acc + carType.amount * carType.price,
+      //0
+    //) 
+    //useEffect(() => {
+     // document.title = `LMJ: ${total}€ d'achats`
+    //}, [total])
+
     return (
-    <div>
-       <h4>Produits :</h4>
-       
-       <h4>Total :</h4> 
-    </div> 
+      <div>
+        <ul>
+          {
+            cart.map({ name, price, amount}, index) => (
+              <div>
+
+              </div>
+            )
+          }
+        </ul>
         
+      </div>
     )
+      
 }
-export default MyCart
+  
+export default MyCart;

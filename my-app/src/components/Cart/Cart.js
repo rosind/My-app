@@ -21,8 +21,8 @@ export const Cart = (props) => {
       })}
     </ul>
   );
-
-  return (
+  
+    return (
     <Modal
     show={true}
     onHide={undefined}
@@ -38,7 +38,7 @@ export const Cart = (props) => {
     </Modal.Body>
     <Modal.Footer>
       <Button variant="secondary" onClick={props.onClose}>Close</Button>
-      <Button variant="primary">Order</Button>
+      <Button variant="primary" onClick={() => alert("Votre commande est validé")}> Order</Button>
     </Modal.Footer>
   </Modal>
   );
